@@ -1,11 +1,20 @@
 {
-    "dragons": [
-        {
-            "id": 1,
-            "name": "Dragão de Fogo",
-            "ataque": 4321,
-            "defesa": 5432,
-            "elemento": ["Fogo"]
-        }
-    ]
+  "dragoes": [
+    {
+      "name": "Dragão de planta",
+      "url": "https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/ui_2283_dragon_abnormal_3.png",
+      "ataque": "4",
+      "defesa": "16",
+      "tipo": "Água",
+      "id": 2
+    },
+    {
+      "name": "Dragão Espelho",
+      "url": "https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/ui_2547_dragon_absolutezero_3.png",
+      "ataque": "1223",
+      "defesa": "233",
+      "tipo": "Ar",
+      "id": 3
+    }
+  ]
 }

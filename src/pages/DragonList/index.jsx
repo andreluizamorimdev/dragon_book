@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const DragonList = () => {
+
+  const [dragoes, setDragoes] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/dragoes')
+      .then(async (response) => {
+        const data = await response.json()
+        setDragoes(data)
+      })
+  }, [])
+
   return (
     <div className="card-list">
       <h2>Tabela de Dragões</h2>
@@ -15,30 +26,22 @@ const DragonList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <img
-                alt="Hydra Dragon 3"
-                src="https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/ui_1023_dragon_cool_fire_b_1.png"
-              />
-            </td>
-            <td>Dragão 1</td>
-            <td>Fogo</td>
-            <td>100</td>
-            <td>80</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                alt="Hydra Dragon 3"
-                src="  https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/ui_1104_dragon_fireice_b_1.png"
-              />
-            </td>
-            <td>Dragão 2</td>
-            <td>Água</td>
-            <td>90</td>
-            <td>95</td>
-          </tr>
+          {
+            dragoes.map(dragao => (
+              <tr key={dragao.id}>
+                <td>
+                  <img
+                    alt="Hydra Dragon 3"
+                    src={dragao.url}
+                  />
+                </td>
+                <td>{dragao.name}</td>
+                <td>{dragao.tipo}</td>
+                <td>{dragao.ataque}</td>
+                <td>{dragao.defesa}</td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
     </div>
