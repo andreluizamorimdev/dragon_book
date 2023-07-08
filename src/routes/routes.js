@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import DragonForm from '../pages/DragonForm';
 import DragonList from '../pages/DragonList';
