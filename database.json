@@ -1,0 +1,11 @@
+{
+    "dragons": [
+        {
+            "id": 1,
+            "name": "Dragão de Fogo",
+            "ataque": 4321,
+            "defesa": 5432,
+            "elemento": ["Fogo"]
+        }
+    ]
+}
